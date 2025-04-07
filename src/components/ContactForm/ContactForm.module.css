@@ -1,0 +1,61 @@
+.form {
+    background-color: rgba(41, 20, 7, 0.205);
+    border: solid 1px rgba(41, 20, 7, 0.897); 
+    border-radius: 15px;
+    padding: 15px 15px;
+    width: 400px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.label {
+    margin-bottom: 5px;
+}
+
+.input {
+    background-color: rgba(73, 36, 11, 0.637);
+    border: solid 1px rgba(41, 20, 7, 0.897);
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: rgb(243, 216, 193);
+}
+
+.input:hover {
+    color: rgb(243, 216, 193);
+    background-color: rgba(114, 57, 19, 0.637);
+    border: solid 1px rgba(82, 40, 15, 0.897);
+}
+
+.button {
+    background-color: rgba(73, 36, 11, 0.637);
+    border: solid 1px rgba(41, 20, 7, 0.897);
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.button:hover {
+color: rgb(243, 216, 193);
+background-color: rgba(114, 57, 19, 0.637);
+border: solid 1px rgba(82, 40, 15, 0.897);
+}
+
+.err {
+    color: brown;
+    font-weight: 500;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}

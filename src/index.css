@@ -1,0 +1,63 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+
+  color: rgba(214, 187, 163, 0.918);
+  background-image: url(/src/assets/img/fon.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  max-width: 2440px;
+  padding: 20px;
+}
+
+/* ============================================глобальні скидання стилів ========================================*/
+* {box-sizing: border-box;}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  color: currentColor;
+}
+
+.input {
+  font-family: inherit;
+}
+
+/*скинути налаштування для філсетів (це як діви у модальному вікні) */
+.fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
