@@ -2,7 +2,7 @@ import css from './Contact.module.css';
 import { ImPhone } from "react-icons/im";
 import { FaCat } from "react-icons/fa";
 import {useDispatch} from 'react-redux';
-import {deleteContact} from '../../redux/contactsOps';
+import {deleteContact} from '../../redux/contacts/operations';
 
 export default function Contact ({listElement:{name,number,id, avatar}}) {
 const dispatch = useDispatch();

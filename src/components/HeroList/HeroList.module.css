@@ -1,0 +1,19 @@
+.ul {
+    display: flex;
+    justify-content:space-between;
+    gap: 30px;
+}
+
+.li {
+    width: 300px;
+    color:rgb(96, 148, 139);
+    display: flex;
+    flex-direction: column;
+}
+.h3 {
+
+    margin-bottom: 10px;
+}
+.p {
+    font-size: 14px;
+}

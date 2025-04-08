@@ -1,18 +1,3 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  font-size: 16px;
-
-  color: rgba(214, 187, 163, 0.918);
-  background-image: url(/src/assets/img/fon.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  max-width: 2440px;
-  padding: 20px;
-}
-
 /* ============================================глобальні скидання стилів ========================================*/
 * {box-sizing: border-box;}
 
@@ -39,13 +24,6 @@ button {
   font-family: inherit;
 }
 
-/*скинути налаштування для філсетів (це як діви у модальному вікні) */
-.fieldset {
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-
 h1,
 h2,
 h3,
@@ -60,4 +38,31 @@ p {
 img {
   display: block;
   max-width: 100%;
+}
+
+
+:root {
+  font-family: "Delius", cursive;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 20px;
+  color: rgb(1, 44, 43);
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.552), rgba(255, 255, 255, 0.575)),
+    url('/src/assets/img/fon.jpg');
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
 }
