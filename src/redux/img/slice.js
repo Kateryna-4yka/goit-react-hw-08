@@ -8,10 +8,8 @@ const slice = createSlice ({
             loading: false,
             error: null,
     },
-
   extraReducers: builder => {
     builder
-
     .addCase(requestOnUnsplsh.pending, (state) => {
       state.loading = true;
       state.error = null;
@@ -25,7 +23,6 @@ const slice = createSlice ({
       state.loading =  false;
       state.error = action.payload;
     })
-
 },
 });
  

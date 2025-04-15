@@ -1,25 +1,26 @@
 import css from './TasksPage.module.css';
-
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { addTask } from '../../redux/tasks/slice';
 import { TaskList } from '../../components/TaskList/TaskList';
-import { TaskEditor } from '../../components/TaskEditor/TaskEditor';
-import { fetchTasks } from '../../redux/tasks/operations';
-import { selectLoading } from '../../redux/tasks/selectors';
 
 export default function TasksPage() {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectLoading);
 
-  useEffect(() => {
-    dispatch(fetchTasks());
-  }, [dispatch]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const text = form.elements.text.value.trim();
+    if (!text) return;
+    dispatch(addTask(text));
+    form.reset();
+  };
 
   return (
     <>
-      <title>Your tasks</title>
-      <TaskEditor />
-      <div>{isLoading && 'Request in progress...'}</div>
+      <form className={css.form} onSubmit={handleSubmit}>
+        <input name="text" className={css.input} placeholder="Введи задачу..." />
+        <button type="submit" className={css.button}>Add task</button>
+      </form>
       <TaskList />
     </>
   );

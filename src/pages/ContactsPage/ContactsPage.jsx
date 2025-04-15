@@ -4,10 +4,7 @@ import ContactList from '../../components/ContactList/ContactList';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from '../../redux/contacts/operations';
 import { selectAllContacts } from '../../redux/contacts/selectors';
-
-
 import { useEffect} from 'react';
-import flower from '../../assets/img/flower.png';
 import css from './ContactsPage.module.css';
 
 export default function ContactsPage () {
@@ -17,8 +14,8 @@ export default function ContactsPage () {
     const allContacts = useSelector (selectAllContacts);
 
     return   <div className={css.div}>
-        <h3 className={css.h3}>Contacts Book</h3>
-        <p className={css.p}>All contacts: {allContacts}</p>
+        <h3>Contacts Book</h3>
+        <p>All contacts: {allContacts}</p>
         <ContactForm />
         <SearchBox />
         <ContactList />

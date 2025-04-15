@@ -56,10 +56,7 @@ const slice = createSlice ({
       state.contacts.error = action.payload;
     })
 
-
 // прибераємо данні, щоб не світилися після розлогіну користувача
-
-
     .addCase (logOut.fulfilled, (state)=>{
       state.contacts.items = [];
     })

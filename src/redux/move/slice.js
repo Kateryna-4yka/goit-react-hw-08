@@ -10,14 +10,11 @@ const slice = createSlice ({
             error: null,
             details: {}, 
             dopInfo: {},
-
     }},
 
   extraReducers: builder => {
     builder
-
-
-    
+  
     .addCase(fetchMovies.pending, (state) => {
       state.move.loading = true;
       state.move.error = null;

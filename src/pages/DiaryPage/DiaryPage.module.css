@@ -9,22 +9,21 @@
   transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
-  width: 1000px;
-  padding: 40px;
+  width: 800px;
+  padding: 30px;
   background-image:linear-gradient(to bottom,rgba(220, 233, 231, 0.78), rgba(182, 210, 205, 0.362));
   border: solid 1px rgb(124, 187, 176);
   border-radius: 15px;
-  box-shadow: 0 8px 16px rgb(175, 201, 197);
+  box-shadow: 0 8px 8px rgba(189, 224, 218, 0.616);
 }
 
 .input:focus,   .input:hover {
-  box-shadow: 0 0 0 3px rgba(156, 213, 204, 0.41);
+  box-shadow: 0 8px 8px rgba(142, 221, 208, 0.616);
   outline: none;
 }
 
-
 .btn {
-  padding: 15px 40px;
+  padding: 10px 40px;
 }
 
 .div {
@@ -37,9 +36,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
- 
-}
+  gap: 10px;
+ }
 
 .cont {
   flex-wrap: wrap;
@@ -48,12 +46,12 @@
   transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  width: 800px;
   padding: 40px;
   background-image:linear-gradient(to bottom,rgba(220, 233, 231, 0.78), rgba(182, 210, 205, 0.362));
   border: solid 1px rgb(124, 187, 176);
   border-radius: 15px;
-  box-shadow: 0 8px 16px rgb(175, 201, 197);
+  box-shadow: 0 8px 8px rgba(189, 224, 218, 0.616);
 }
 
 .cont * {
@@ -62,6 +60,6 @@
 }
 
 .cont:focus,   .cont:hover {
-  box-shadow: 0 0 0 3px rgba(156, 213, 204, 0.41);
+  box-shadow: 0 8px 8px rgba(142, 221, 208, 0.616);
   outline: none;
 }
