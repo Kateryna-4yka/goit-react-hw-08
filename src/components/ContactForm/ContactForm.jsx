@@ -3,7 +3,7 @@ import {Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 import { IoIosPaw } from "react-icons/io";
 import { BiPhoneIncoming } from "react-icons/bi";
-import { BiSolidCat } from "react-icons/bi";
+import { RiContactsLine } from "react-icons/ri";
 import {useId} from 'react';
 import css from './ContactForm.module.css';
 import { useDispatch} from 'react-redux';
@@ -38,7 +38,7 @@ validationSchema={ContactFormSchema}>
 
 <Form className={css.form}>
 <div className={css.div}>
-    <label className={css.label} htmlFor={`name-${idForEl}`}><BiSolidCat className={css.icon}/> Name</label>
+    <label className={css.label} htmlFor={`name-${idForEl}`}><RiContactsLine className={css.icon}/> Name</label>
     <Field className={css.input} id={`name-${idForEl}`} name='name' type='text' />
     <ErrorMessage  className={css.err}  name="name" component="span" />
 </div>
@@ -47,7 +47,7 @@ validationSchema={ContactFormSchema}>
     <Field className={css.input} id={`number-${idForEl}`} name='number'  type='tel' />
     <ErrorMessage  className={css.err} name="number" component="span" />
 </div>
-<button className={css.button} type='submit'><IoIosPaw className={css.icon}/> Add contact</button> 
+<button className={css.btn} type='submit'><IoIosPaw className={css.icon}/> Add contact</button> 
 </Form>
 </Formik>
 }

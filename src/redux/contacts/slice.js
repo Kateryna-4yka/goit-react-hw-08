@@ -1,18 +1,6 @@
-import { createSlice, createSelector } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { fetchContacts, addContact, deleteContact } from './operations';
-import { selectNameFilter } from '../filters/slice';
-
-export const selectContacts = state => state.contacts.contacts.items;
-export const selectLoading = state => state.contacts.contacts.loading;
-export const selectError = state => state.contacts.contacts.error;
-export const selectFilteredContacts = createSelector ([selectContacts, selectNameFilter], 
-  (contacts, wordForFilter) => {
-  return contacts.filter(el => {return el.name.toLowerCase().includes(wordForFilter.toLowerCase().trim())})});  
-
-
-  export const selectAllContacts = createSelector ([selectContacts], 
-    (contacts) => {
-    return contacts.length});
+import { logOut } from '../auth/operations';
 
 const slice = createSlice ({
     name: `contacts`, 
@@ -22,7 +10,7 @@ const slice = createSlice ({
             loading: false,
             error: null
     }},
-  // Додаємо обробку зовнішніх екшенів функцій
+
   extraReducers: builder => {
     builder
     .addCase(fetchContacts.pending, (state) => {
@@ -66,7 +54,15 @@ const slice = createSlice ({
     .addCase(deleteContact.rejected, (state, action) => {
       state.contacts.loading =  false;
       state.contacts.error = action.payload;
-    });
+    })
+
+
+// прибераємо данні, щоб не світилися після розлогіну користувача
+
+
+    .addCase (logOut.fulfilled, (state)=>{
+      state.contacts.items = [];
+    })
   },
 });
  

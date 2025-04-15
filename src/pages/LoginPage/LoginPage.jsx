@@ -1,6 +1,8 @@
 import { Formik,Form, Field, ErrorMessage } from "formik";
 import { useId } from 'react';
 import css from './LoginPage.module.css';
+import { useDispatch } from "react-redux";
+import { logIN } from "../../redux/auth/operations";
 
 const initialValues={
     email: '',
@@ -11,14 +13,15 @@ export default function LoginPage () {
 
 const email = useId();
 const pasw = useId(); 
-
+const dispatch =useDispatch(); 
 function handleSubmit (value, actions) {
-    console.dir(value);
+    dispatch(logIN(value));
     actions.resetForm();
 }
 
-return <>
-
+return <div className={css.div}>
+<div className={css.centerDiv}>
+<h3>Log in to access the full app</h3>
 <Formik 
 initialValues={initialValues}
 onSubmit={handleSubmit}
@@ -36,4 +39,6 @@ onSubmit={handleSubmit}
 
 </Form>
 </Formik>
-</>}
+</div>
+
+ </div>}

@@ -1,0 +1,14 @@
+
+.div {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/src/assets/img/flower.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+

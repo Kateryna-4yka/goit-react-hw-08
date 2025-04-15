@@ -1,0 +1,67 @@
+
+.label {
+  font-weight: 600;
+  color:rgb(75, 131, 122);
+}
+
+.input {
+  background-color: rgba(227, 255, 250, 0.601);
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  padding: 40px;
+  background-image:linear-gradient(to bottom,rgba(220, 233, 231, 0.78), rgba(182, 210, 205, 0.362));
+  border: solid 1px rgb(124, 187, 176);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgb(175, 201, 197);
+}
+
+.input:focus,   .input:hover {
+  box-shadow: 0 0 0 3px rgba(156, 213, 204, 0.41);
+  outline: none;
+}
+
+
+.btn {
+  padding: 15px 40px;
+}
+
+.div {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('/src/assets/img/ophi.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left; 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+ 
+}
+
+.cont {
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: rgba(227, 255, 250, 0.601);
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  padding: 40px;
+  background-image:linear-gradient(to bottom,rgba(220, 233, 231, 0.78), rgba(182, 210, 205, 0.362));
+  border: solid 1px rgb(124, 187, 176);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgb(175, 201, 197);
+}
+
+.cont * {
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.cont:focus,   .cont:hover {
+  box-shadow: 0 0 0 3px rgba(156, 213, 204, 0.41);
+  outline: none;
+}

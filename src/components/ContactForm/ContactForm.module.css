@@ -1,61 +1,56 @@
-.form {
-    background-color: rgba(41, 20, 7, 0.205);
-    border: solid 1px rgba(41, 20, 7, 0.897); 
-    border-radius: 15px;
-    padding: 15px 15px;
-    width: 400px;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
 .div {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
 }
 
-.label {
-    margin-bottom: 5px;
-}
-
-.input {
-    background-color: rgba(73, 36, 11, 0.637);
-    border: solid 1px rgba(41, 20, 7, 0.897);
-    border-radius: 5px;
-    padding: 10px 15px;
-    color: rgb(243, 216, 193);
-}
-
-.input:hover {
-    color: rgb(243, 216, 193);
-    background-color: rgba(114, 57, 19, 0.637);
-    border: solid 1px rgba(82, 40, 15, 0.897);
-}
-
-.button {
-    background-color: rgba(73, 36, 11, 0.637);
-    border: solid 1px rgba(41, 20, 7, 0.897);
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-weight: 500;
+.form {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: background-color 0.5s ease, color 0.3s ease;
-}
+    flex-direction: column;
+    width: 100%;
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-image:linear-gradient(to bottom,rgba(124, 187, 176, 0.139), rgba(182, 210, 205, 0.362));
+    border: solid 1px rgb(124, 187, 176);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgb(175, 201, 197);
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    font-weight: 600;
+    color:rgb(75, 131, 122);
+    margin-bottom: 4px;
+    transition: all 0.5s ease;
+  }
 
-.button:hover {
-color: rgb(243, 216, 193);
-background-color: rgba(114, 57, 19, 0.637);
-border: solid 1px rgba(82, 40, 15, 0.897);
-}
+  .label:hover {
+  transform: translateY(-2px);
+  }
+  
+  .input {
+    padding: 10px 14px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgb(124, 187, 176);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+  }
+  
+  .input:focus,   .input:hover {
+    box-shadow: 0 0 0 3px rgba(156, 213, 204, 0.41);
+    outline: none;
+  }
+  
+  .err {
+    color: #c798ad;
+    font-size: 13px;
+    margin-top: -8px;
+    margin-bottom: 4px;
+  }
+  
+  .btn {
+    padding: 12px 16px;
+    margin: 10px 0;
+  }
 
-.err {
-    color: brown;
-    font-weight: 500;
-}
-
-.icon {
-    width: 20px;
-    height: 20px;
-}

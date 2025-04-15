@@ -1,0 +1,71 @@
+.button {
+    background-image:linear-gradient(to bottom,rgba(81, 193, 173, 0.503), rgba(109, 185, 171, 0.719));
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    padding: 10px 20px;
+  }
+  
+  .button:hover,  .button:focus {
+    background-color: rgb(131, 210, 196);
+  }
+  
+  
+.h3 {
+    margin-bottom: 10px;
+}
+
+.img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px; 
+    box-shadow: 0 8px 16px rgb(175, 201, 197);
+    margin-bottom: 25px;
+}
+
+.p {
+    margin-bottom: 20px;
+}
+
+.ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.active {
+    background-color: rgb(131, 210, 196);
+}
+
+.div {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.divBox {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.liProd {
+    font-size: 15px;;
+}
+
+.content {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/src/assets/img/pion2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:right top; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
