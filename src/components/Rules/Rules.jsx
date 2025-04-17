@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 
 
 
-export function NotPrivatePages ({component, redirect}) {
+export function RestrictedRoute ({component, redirect}) {
 const isLoggedIn = useSelector (selectIsLoggedIn);
 return isLoggedIn ? <Navigate  to={redirect}/> : component;
 }

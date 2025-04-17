@@ -1,6 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTask, deleteTask } from '../../redux/tasks/slice';
 import css from './TaskList.module.css';
+import clsx from 'clsx';
+import { IoCheckmark,IoTrash } from "react-icons/io5";
+
 
 export function TaskList() {
   const tasks = useSelector((state) => state.tasks.items);
@@ -9,14 +12,17 @@ export function TaskList() {
   return (
     <ul className={css.list}>
       {tasks.map((task, index) => (
-        <li key={index} className={task.completed ? css.completed : ''}>
-          <span>{task.text}</span>
-          <div>
-            <button onClick={() => dispatch(toggleTask(index))}>✅</button>
-            <button onClick={() => dispatch(deleteTask(index))}>🗑️</button>
+        <div className={css.buttons}>
+        <div key={index} className={css.buttons}>
+          <p className={clsx(css.text, {[css.completed]: task.completed,})}>{task.text}
+          </p>
+        </div>
+
+          <div className={css.buttons}>
+            <button className={css.btn} onClick={() => dispatch(toggleTask(index))}><IoCheckmark /> Done</button>
+            <button className={css.btn}  onClick={() => dispatch(deleteTask(index))}><IoTrash /> Delete</button>
           </div>
-        </li>
-      ))}
+          </div>))}
     </ul>
   );
 }

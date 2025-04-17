@@ -24,28 +24,40 @@ export default function ImageGallery() {
     setSelectedImage(null);
     setIsOpen(false);
   };
-
+  const isEmpty = !loader && !error && info.length === 0;
   return (
     <>
-      <ul className={css.ul}>
-      {info
-    .filter((el) => el && el.urls && el.urls.small) // 🔍 Перевірка перед map
-    .map((el) => (
-      <li
-        className={css.li}
-        key={el.id}
-        onClick={() => openModalWithImage(el)}
-      >
-            <img className={css.img} src={el.urls.small} alt={el.alt_description || 'Image'} />
-          </li>
-        ))}
-      </ul>
+      {loader && <p className={css.message}>Loading...</p>}
+
+      {error && <p className={css.error}>Oops! Something went wrong: {error}</p>}
+
+      {isEmpty && <p className={css.message}>No results found for your query.</p>}
+
+      {!loader && !error && info.length > 0 && (
+        <ul className={css.ul}>
+          {info
+            .filter((el) => el && el.urls && el.urls.small)
+            .map((el) => (
+              <li
+                className={css.li}
+                key={el.id}
+                onClick={() => openModalWithImage(el)}
+              >
+                <img
+                  className={css.img}
+                  src={el.urls.small}
+                  alt={el.alt_description || 'Image'}
+                />
+              </li>
+            ))}
+        </ul>
+      )}
 
       <ImageModal
-  el={selectedImage}
-  openModal={!!selectedImage} 
-  closeModal={closeModal}
-/>
+        el={selectedImage}
+        openModal={!!selectedImage}
+        closeModal={closeModal}
+      />
     </>
   );
 }

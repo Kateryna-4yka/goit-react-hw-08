@@ -24,7 +24,7 @@ return  <div className={css.div}>
         type="text"
         autoComplete="off"
         autoFocus
-        placeholder="Search images and photos"
+        placeholder="image search..."
     />
 
     <button className ={css.btn} type="submit"><GiMagnifyingGlass /> Search</button>

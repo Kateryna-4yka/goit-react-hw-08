@@ -48,11 +48,3 @@ catch (error) {return thunkAPI.rejectWithValue(error.message)}},
 }}); 
 
 
-
-
-
-// name    :    kota
-// kotakota@GiMailShirt.com
-// fsdaads4121234
-
-

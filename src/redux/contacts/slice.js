@@ -2,15 +2,36 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchContacts, addContact, deleteContact } from './operations';
 import { logOut } from '../auth/operations';
 
-const slice = createSlice ({
-    name: `contacts`, 
-    initialState: 
-        {contacts: {
-            items: [],
-            loading: false,
-            error: null
-    }},
-
+const slice = createSlice({
+  name: 'contacts',
+  initialState: {
+    contacts: {
+      items: [],
+      loading: false,
+      error: null,
+    },
+    modal: {
+      isOpen: false,
+      contactId: null,
+      contactName: '',
+    },
+  },
+  reducers: {
+    setOpenModal(state, action) {
+      state.modal = {
+        isOpen: true,
+        contactId: action.payload.id,
+        contactName: action.payload.name,
+      };
+    },
+    setcCloseModal(state) {
+      state.modal = {
+        isOpen: false,
+        contactId: null,
+        contactName: '',
+      };
+    },
+  },
   extraReducers: builder => {
     builder
     .addCase(fetchContacts.pending, (state) => {
@@ -64,3 +85,4 @@ const slice = createSlice ({
 });
  
   export default slice.reducer;
+  export const { setOpenModal, setcCloseModal } = slice.actions;

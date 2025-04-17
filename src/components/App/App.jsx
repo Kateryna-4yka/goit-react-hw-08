@@ -6,8 +6,7 @@ import MoviesCast from '../MoviesCast/MoviesCast';
 import MoviesReviews from '../MoviesReviews/MoviesReviews';
 import { refresUser } from '../../redux/auth/operations';
 import { selectRefreshing } from '../../redux/auth/selectors';
-import {NotPrivatePages, PrivatePages} from '../Rules/Rules';
-
+import {RestrictedRoute, PrivatePages} from '../Rules/Rules';
 
 const HomePage = lazy (()=> import ('../HomePage/HomePage'));
 const RegistrationPage = lazy (()=> import ('../../pages/RegistrationPage/RegistrationPage'));
@@ -33,18 +32,19 @@ useEffect (()=>{
     
     
     <Suspense fallback={`Loading page...`}>
+
     <Routes>
 
       <Route path="/" element={<Layout />}>
 
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={
-        <NotPrivatePages component={<RegistrationPage />} redirect="/" />} />
+        <RestrictedRoute component={<RegistrationPage />} redirect="/" />} />
 
         <Route 
         path="/login" 
         element={
-        <NotPrivatePages component={<LoginPage />} redirect="/" />} />
+        <RestrictedRoute component={<LoginPage />} redirect="/" />} />
 
         <Route path="/tasks" element={
         <PrivatePages component={<TasksPage />} redirect="/register" />} />

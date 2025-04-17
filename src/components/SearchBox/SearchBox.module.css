@@ -31,6 +31,7 @@
     transition: box-shadow 0.3s;
     margin-bottom: 15px;
     transition: all 0.5s ease;
+    background-color: rgba(227, 255, 250, 0.343);
   }
   
   .input:focus,   .input:hover {

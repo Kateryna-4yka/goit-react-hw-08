@@ -5,6 +5,11 @@ export const selectContacts = state => state.contacts.contacts.items;
 export const selectLoading = state => state.contacts.contacts.loading;
 export const selectError = state => state.contacts.contacts.error;
 
+export const selectModalOpen = state => state.contacts.modal.isOpen;
+export const selectModalContactId = state => state.contacts.modal.contactId;
+export const selectModalContactName = state => state.contacts.modal.contactName;
+
+
 export const selectFilteredContacts = createSelector(
   [selectContacts, selectNameFilter],
   (contacts, wordForFilter) => {

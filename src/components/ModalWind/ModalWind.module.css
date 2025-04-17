@@ -1,0 +1,61 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: linear-gradient(to bottom,  rgba(61, 99, 92, 0.259),rgba(0, 0, 0, 0.345)), url('/src/assets/img/magnolia.png'), linear-gradient(to bottom,  rgba(56, 84, 81, 0.411), rgba(0, 0, 0, 0.656));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background-image:linear-gradient(to top,rgba(124, 187, 176, 0.508), rgba(255, 255, 255, 0.644));
+  border: solid 1px rgb(124, 187, 176);
+  border-radius: 15px;
+  box-shadow: 0 0px 10px rgba(136, 198, 180, 0.692);
+  background-color: rgba(227, 255, 250, 0.343);
+  width: 500px;
+  padding: 30px;
+  animation: fadeIn 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.div {
+  display: flex;
+  gap: 5px;
+}
+
+.div2 {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 20px;
+}
+

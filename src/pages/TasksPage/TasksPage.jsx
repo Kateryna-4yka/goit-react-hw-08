@@ -16,12 +16,12 @@ export default function TasksPage() {
   };
 
   return (
-    <>
+    <div className={css.div}>
       <form className={css.form} onSubmit={handleSubmit}>
-        <input name="text" className={css.input} placeholder="Введи задачу..." />
-        <button type="submit" className={css.button}>Add task</button>
+        <input name="text" className={css.input} placeholder="must be done..." />
+        <button type="submit" className={css.btn}>Add task</button>
       </form>
       <TaskList />
-    </>
+    </div>
   );
 }

@@ -45,3 +45,19 @@ catch (error) {
         return thunkApi.rejectWithValue(error.message);}})
 
 
+// ====================================================filter
+
+export const filterByName = createAsyncThunk(
+  'movie/filter',
+
+ async (query, thunkApi) =>{
+  try {
+  const url = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${api_key}`;
+  
+  const trendingToday = await axios.get(url, token);
+
+  return trendingToday.data.results;
+}
+catch (error) {
+  return thunkApi.rejectWithValue(error.message);}})
+

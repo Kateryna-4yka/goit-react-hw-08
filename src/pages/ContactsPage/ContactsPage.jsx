@@ -6,6 +6,7 @@ import { fetchContacts } from '../../redux/contacts/operations';
 import { selectAllContacts } from '../../redux/contacts/selectors';
 import { useEffect} from 'react';
 import css from './ContactsPage.module.css';
+import ModalWind from '../../components/ModalWind/ModalWind';
 
 export default function ContactsPage () {
     
@@ -16,6 +17,7 @@ export default function ContactsPage () {
     return   <div className={css.div}>
         <h3>Contacts Book</h3>
         <p>All contacts: {allContacts}</p>
+        <ModalWind />
         <ContactForm />
         <SearchBox />
         <ContactList />

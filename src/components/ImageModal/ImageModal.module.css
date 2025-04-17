@@ -4,7 +4,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom,  rgba(63, 50, 23, 0.651), rgb(27, 19, 0));
+    background-image: linear-gradient(to bottom,  rgba(56, 84, 81, 0.651), rgb(0, 0, 0));
+    
     display: flex;
     align-items: center;
     justify-content: center;

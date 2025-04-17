@@ -8,6 +8,7 @@ import {  persistStore,  persistReducer,  FLUSH,  REHYDRATE,  PAUSE,  PERSIST,  
 import imageReducer from '../redux/img/slice';
 import storage from 'redux-persist/lib/storage';
 
+
 const authPersistConfig = persistReducer({
   key: 'token',
   storage,
@@ -22,6 +23,7 @@ export const store = configureStore({
     tasks: tasksReducer,
     image:  imageReducer,
     move: moveReducer,
+
   },
 
   middleware: (getDefaultMiddleware) =>
